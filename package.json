@@ -1,0 +1,23 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rutuja206/Webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rutuja206/Webpack/issues"
+  },
+  "homepage": "https://github.com/rutuja206/Webpack#readme",
+  "description": "",
+  "devDependencies": {
+    "webpack": "^5.100.0",
+    "webpack-cli": "^6.0.1"
+  }
+}
