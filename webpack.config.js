@@ -14,7 +14,16 @@ module.exports = {
             {
                 test : /.(avif|webp|jpg|jpeg|png)/, //types of the files
                 type : "asset/resource"
-            }
+            },
+            {
+                test : /\.(css)$/,
+                use : ["style-loader","css-loader"] //loader are executed from right to left
+            },
+            {
+                test : /\.(scss)$/,
+                use : ["style-loader","css-loader","sass-loader"] //first sass convert your scss into css and then css is style will ingest it into head of youe dom
+                
+            },
         ]
     }
 }

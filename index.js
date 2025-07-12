@@ -8,6 +8,8 @@
 
 import water from './assets/water.jpg';
 import nature from './assets/nature.webp';
+import './styles/styles.css'
+import './styles/style.scss'
 document.getElementById("toast").style.visibility = "hidden";
 
 document.getElementById("title").addEventListener('click',()=>{
