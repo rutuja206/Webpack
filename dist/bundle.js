@@ -10,23 +10,33 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./assets/nature.webp":
+/*!****************************!*\
+  !*** ./assets/nature.webp ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"asset/95373fd2b1dfbf5c0950.webp\";\n\n//# sourceURL=webpack://webpack-demo/./assets/nature.webp?\n}");
+
+/***/ }),
+
+/***/ "./assets/water.jpg":
+/*!**************************!*\
+  !*** ./assets/water.jpg ***!
+  \**************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"asset/c80b344481034a149a2e.jpg\";\n\n//# sourceURL=webpack://webpack-demo/./assets/water.jpg?\n}");
+
+/***/ }),
+
 /***/ "./index.js":
 /*!******************!*\
   !*** ./index.js ***!
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sum */ \"./sum.js\");\n\r\n\r\ndocument.getElementById('button').addEventListener('click',()=>{\r\n    const result = (0,_sum__WEBPACK_IMPORTED_MODULE_0__.sum)(4,5);\r\n    document.getElementById('result').innerText = `the sum is ${result}`\r\n})\n\n//# sourceURL=webpack://webpack-demo/./index.js?\n}");
-
-/***/ }),
-
-/***/ "./sum.js":
-/*!****************!*\
-  !*** ./sum.js ***!
-  \****************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   sum: () => (/* binding */ sum)\n/* harmony export */ });\nconst sum = (a,b) => a + b ;\n\n//# sourceURL=webpack://webpack-demo/./sum.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_water_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/water.jpg */ \"./assets/water.jpg\");\n/* harmony import */ var _assets_nature_webp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/nature.webp */ \"./assets/nature.webp\");\n// import {sum} from './sum'\r\n\r\n// document.getElementById('button').addEventListener('click',()=>{\r\n//     const result = sum(4,5);\r\n//     document.getElementById('result').innerText = `the sum is ${result}`\r\n// })\r\n \r\n\r\n\r\n\r\ndocument.getElementById(\"toast\").style.visibility = \"hidden\";\r\n\r\ndocument.getElementById(\"title\").addEventListener('click',()=>{\r\n    document.getElementById(\"toast\").style.visibility = \"visible\";\r\n})\r\n\r\ndocument.getElementById(\"nature\").src = _assets_nature_webp__WEBPACK_IMPORTED_MODULE_1__\r\ndocument.getElementById(\"water\").src = _assets_water_jpg__WEBPACK_IMPORTED_MODULE_0__\n\n//# sourceURL=webpack://webpack-demo/./index.js?\n}");
 
 /***/ })
 
@@ -57,21 +67,16 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/define property getters */
+/******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
 /******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 		})();
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
@@ -83,6 +88,29 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/^blob:/, "").replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
